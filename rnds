@@ -1,0 +1,8 @@
+#!/usr/bin/ruby 
+
+abort("Usage: #{$0} [optional: length]") if ARGV[0]=='h'
+
+(ARGV.length == 1 ? ARGV[0].to_i : 16).times do 
+  print (rand(94)+33).chr
+end
+puts 
