@@ -1,8 +1,25 @@
 #!/usr/bin/ruby 
 
-abort("Usage: #{$0} [optional: length]") if ARGV[0]=='h'
-
-(ARGV.length == 1 ? ARGV[0].to_i : 16).times do 
-  print (rand(94)+33).chr
+if ARGV[0]=='h'
+  abort("Usage: #{$0} [optional: <length>] [optional: an (alphanumeric only)]") 
 end
-puts 
+
+# Include special chars?
+if ARGV.include?('an')
+  # Alphanumeric only
+  chars = (48..57).to_a + (65..90).to_a + (97..122).to_a 
+else
+  chars = (33..126).to_a
+end
+
+# Get output length
+if ARGV.length >= 1 && ARGV[0] =~ /^\d+$/
+  length = ARGV[0].to_i
+else
+  length = 16
+end
+
+output = ''
+length.times { output += chars.shuffle.first.chr }
+
+puts output 

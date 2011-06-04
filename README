@@ -6,12 +6,14 @@ Generates printable ASCII noise
 
 Usage: 
 
-rnds h  - Display usage 
-  Usage: ./rnds [optional: length]
+rnds h      - Display usage 
+  Usage: /home/drichert/bin/rnds [optional: <length>] [optional: an (alphanumeric only)]
  
-rnds    - Generate default (16 chars atow) length noise string
+rnds        - Generate default (16 chars atow) length noise string
   m|RG]!`lP^WJ-ORa
 
-rnds 66 - Generate 66 chars worth
+rnds 66     - Generate 66 chars worth
   9-8H:q0yPa}ltPx!R4@,lU9/X%=|(/#Al{^53rb*eos1aa'4vg_wo_Oq/Qh+X!J?kC
 
+rnds 13 an  - Generate 13 alphanumeric characters
+  EIaCqVbex7qxk
